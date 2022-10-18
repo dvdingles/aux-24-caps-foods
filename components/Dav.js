@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/3D CAPS FOODS.gltf");
+  const { nodes, materials } = useGLTF("/4D CAPS FOODS.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -97,8 +97,62 @@ export function Dav(props) {
           material={materials["TQ_ARD_edge.001"]}
         />
       </group>
+      <group
+        position={[0.11, -0.02, -0.16]}
+        rotation={[Math.PI / 2, 0, Math.PI / 2]}
+        scale={1.28}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Curve_1.geometry}
+          material={materials.Material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Curve_2.geometry}
+          material={materials["Material.003"]}
+        />
+      </group>
+      <group
+        position={[0.11, 0.01, 0.06]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={1.27}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Curve001_1.geometry}
+          material={materials.Material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Curve001_2.geometry}
+          material={materials["Material.002"]}
+        />
+      </group>
+      <group
+        position={[0.11, 0.01, 0.13]}
+        rotation={[-Math.PI / 2, 0, 0]}
+        scale={1.27}
+      >
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Curve001_1.geometry}
+          material={materials.Material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Curve001_2.geometry}
+          material={materials["Material.002"]}
+        />
+      </group>
     </group>
   );
 }
 
-useGLTF.preload("/3D CAPS FOODS.gltf");
+useGLTF.preload("/4D CAPS FOODS.gltf");
